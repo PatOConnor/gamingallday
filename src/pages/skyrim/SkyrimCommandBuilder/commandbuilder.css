@@ -1,0 +1,93 @@
+:root {
+  --button-height: 80px;
+}
+
+.commandmaker-wrapper {
+  grid-area: body;
+  background: gray;
+  display: grid;
+  grid-template-areas:
+    "nav   nav  "
+    "cmd   tray "
+    "list  tray ";
+  grid-template-rows: 100px var(--button-height) 1fr;
+}
+
+#skyrim-header {
+  grid-area: nav;
+}
+
+#commands-list {
+  grid-area: list;
+  padding-left: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
+#input-tray {
+  grid-area: tray;
+}
+
+.command-button {
+  grid-area: cmd;
+}
+
+.dropdown-menu {
+  height: 50vh;
+  overflow-y: scroll;
+}
+
+.dataResult {
+  width: 300px;
+  height: 200px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow-y: scroll;
+  /* hide scrollbar on IE, edge */
+  -ms-overflow-style: none;
+  /* hide scrollbar on firefox */
+  scrollbar-width: none;
+  color: black;
+}
+
+.dataResult:empty {
+  display: none;
+}
+
+/* hide scrollbar on safari, chrome, opera */
+.dataResult::-webkit-scrollbar {
+  display: none;
+}
+
+.btn {
+  background-color: dimgrey;
+}
+
+.searchOutput {
+  background-color: azure;
+  padding: 5px;
+}
+
+.searchInputs {
+  display: grid;
+  grid-template-areas:
+    "input clearbutton"
+    "input closebutton";
+}
+
+.searchWord {
+  grid-area: input;
+}
+
+.clearButton {
+  grid-area: clearbutton;
+}
+
+.closebutton {
+  grid-area: closebutton;
+}
+
+.hidden {
+  display: none;
+}

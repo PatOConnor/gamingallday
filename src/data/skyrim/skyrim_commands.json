@@ -1,0 +1,836 @@
+{
+  "additem": {
+    "CODE": "additem",
+    "details": "Give a character the specified amount of an item",
+    "NAME": "additem",
+    "params": ["<target>", "<item ID>", "<count>", "<flag (optional)>"]
+  },
+  "addperk": {
+    "CODE": "addperk",
+    "details": "Give a character the selected perk",
+    "NAME": "addperk",
+    "params": ["<target>", "<perk ID>"]
+  },
+  "addspell": {
+    "CODE": "addspell",
+    "details": "Add a specific spell to a character's available arsenal.",
+    "NAME": "addspell",
+    "params": ["<target>", "<spell ID>"]
+  },
+  "addtofaction": {
+    "CODE": "addtofaction",
+    "details": "Add a character to a faction.",
+    "NAME": "addtofaction",
+    "params": ["<target>", "<faction ID>", "<faction rank>"]
+  },
+  "advlevel": {
+    "CODE": "advlevel",
+    "details": "Advance a character's level by one.",
+    "NAME": "advlevel",
+    "params": ["<target>"]
+  },
+  "advskill": {
+    "CODE": "AdvSkill",
+    "details": "Advance the specified skill.",
+    "NAME": "AdvSkill",
+    "params": ["<target>", "<skill>", "<nn>"]
+  },
+  "animcam": {
+    "CODE": "animcam",
+    "details": "Toggle animator camera",
+    "NAME": "animcam",
+    "params": null
+  },
+  "bat": {
+    "CODE": "bat",
+    "details": "Execute a batch file",
+    "NAME": "bat",
+    "params": null
+  },
+  "caqs": {
+    "CODE": "caqs",
+    "details": "Complete all quest stages",
+    "NAME": "caqs",
+    "params": null
+  },
+  "coc": {
+    "CODE": "coc",
+    "details": "Transport to <cellname>",
+    "NAME": "coc",
+    "params": null
+  },
+  "completequest ": {
+    "CODE": "completequest",
+    "details": "Complete the quest instantly.",
+    "NAME": "completequest",
+    "params": ["<quest ID>"]
+  },
+  "cow": {
+    "CODE": "cow",
+    "details": "Transports to cell <cell x, cell y> in <worldspace>",
+    "NAME": "cow",
+    "params": null
+  },
+  "csb": {
+    "CODE": "csb",
+    "details": "Clear screen blood",
+    "NAME": "csb",
+    "params": null
+  },
+  "DamageActorValue ": {
+    "CODE": "DamageActorValue",
+    "details": "Damage value of attribute by <nn> amount",
+    "NAME": "DamageActorValue",
+    "params": ["<target>", "<attribute>", "<nn>"]
+  },
+  "disable": {
+    "CODE": "disable",
+    "details": "Don't render the selected object (includes actors.)",
+    "NAME": "disable",
+    "params": null
+  },
+  "dispelallspells": {
+    "CODE": "dispelallspells",
+    "details": "Dispel all temporary spell effects on target",
+    "NAME": "dispelallspells",
+    "params": null
+  },
+  "drop": {
+    "CODE": "drop",
+    "details": "Force drop items from a character's inventory",
+    "NAME": "drop",
+    "params": null
+  },
+  "duplicateallitems ": {
+    "CODE": "duplicateallitems",
+    "details": "Duplicate all items in the targeted container and places them in the given container.",
+    "NAME": "duplicateallitems",
+    "params": ["<target>", "<container/NPC refID>"]
+  },
+  "enable": {
+    "CODE": "enable",
+    "details": "Render the selected object (includes actors.)",
+    "NAME": "enable",
+    "params": null
+  },
+  "equipitem ": {
+    "CODE": "equipitem",
+    "details": "Equip selected NPC with Item",
+    "NAME": "equipitem",
+    "params": ["<target>", "<0/1>", "<Item baseID>", "<left/right>"]
+  },
+  "equipshout ": {
+    "CODE": "equipshout",
+    "details": "Equipping the given shout.",
+    "NAME": "equipshout",
+    "params": ["<target>", "<Shout ID>"]
+  },
+  "equipspell ": {
+    "CODE": "equipspell",
+    "details": "Equipping the given spell on a particular casting source.",
+    "NAME": "equipspell",
+    "params": ["<target>", "<Casting Sources>", "<Spell ID>"]
+  },
+  "forceAV ": {
+    "CODE": "forceAV",
+    "details": "Force to modify the value of attribute",
+    "NAME": "forceAV",
+    "params": ["<target>", "<attribute>", "<nn>"]
+  },
+  "fov": {
+    "CODE": "fov",
+    "details": "Set fov <angle>",
+    "NAME": "fov",
+    "params": null
+  },
+  "fw": {
+    "CODE": "fw",
+    "details": "Force Weather",
+    "NAME": "fw",
+    "params": null
+  },
+  "getAV ": {
+    "CODE": "getAV",
+    "details": "Get value of attribute",
+    "NAME": "getAV",
+    "params": ["<target>", "<attribute>"]
+  },
+  "getAVinfo ": {
+    "CODE": "getAVinfo",
+    "details": "Get value information of attribute",
+    "NAME": "getAVinfo",
+    "params": ["<target>", "<attribute>"]
+  },
+  "GetGlobalValue ": {
+    "CODE": "GetGlobalValue",
+    "details": "Returns the value of a single global game setting.",
+    "NAME": "GetGlobalValue",
+    "params": ["<Variable>"]
+  },
+  "GetInCellParam ": {
+    "CODE": "GetInCellParam",
+    "details": "Checks if an object is in a specified cell.",
+    "NAME": "GetInCellParam",
+    "params": ["<Cell ID>", "<Object ID>"]
+  },
+  "getlevel ": {
+    "CODE": "getlevel",
+    "details": "Get level of target",
+    "NAME": "getlevel",
+    "params": ["<target>"]
+  },
+  "GetLocationCleared ": {
+    "CODE": "GetLocationCleared",
+    "details": "Check an area's clear code.",
+    "NAME": "GetLocationCleared",
+    "params": ["<location ID>"]
+  },
+  "GetPCMiscStat ": {
+    "CODE": "GetPCMiscStat",
+    "details": "Returns the value of the (typically meaningless) stats shown in the ESC menu.",
+    "NAME": "GetPCMiscStat",
+    "params": ["<Stat>"]
+  },
+  "getrelationshiprank ": {
+    "CODE": "getrelationshiprank",
+    "details": "Get the relationship rank of two actors.",
+    "NAME": "getrelationshiprank",
+    "params": ["<target>", "<NPC refID>"]
+  },
+  "getstage ": {
+    "CODE": "getstage",
+    "details": "Show the current active quest stage.",
+    "NAME": "getstage",
+    "params": ["<quest ID>"]
+  },
+  "hasperk ": {
+    "CODE": "hasperk",
+    "details": "Check if the selected actor has a perk with the selected ID",
+    "NAME": "hasperk",
+    "params": ["<target>", "<perk ID>"]
+  },
+  "help": {
+    "CODE": "help",
+    "details": "Returns the IDs of all items, spells, game settings, etc. which have the entered text in their name.",
+    "NAME": "help",
+    "params": null
+  },
+  "incPCS ": {
+    "CODE": "incPCS",
+    "details": "Increase the given skill to the next level.",
+    "NAME": "incPCS",
+    "params": ["<skill name>"]
+  },
+  "kill ": {
+    "CODE": "kill",
+    "details": "Kill the selected actor (NOT the optional Actor ID).",
+    "NAME": "kill",
+    "params": ["<target>", "<Actor ID (optional)>"]
+  },
+  "killallactors": {
+    "CODE": "killallactors",
+    "details": "Kill all actors.",
+    "NAME": "killallactors",
+    "params": null
+  },
+  "load": {
+    "CODE": "load",
+    "details": "Loads <name> gamesave.",
+    "NAME": "load",
+    "params": null
+  },
+  "lock ": {
+    "CODE": "lock",
+    "details": "Lock targeted object (i.e. door, container) with a difficulty of <level>.",
+    "NAME": "lock",
+    "params": ["<target>", "<level>"]
+  },
+  "MarkForDelete": {
+    "CODE": "MarkForDelete",
+    "details": "Delete an object.",
+    "NAME": "MarkForDelete",
+    "params": null
+  },
+  "modAV ": {
+    "CODE": "modAV",
+    "details": "Modify value of attribute by <nn> amount",
+    "NAME": "modAV",
+    "params": ["<target>", "<attribute>", "<nn>"]
+  },
+  "ModPCMiscStat ": {
+    "CODE": "ModPCMiscStat",
+    "details": "Adjusts the value of the (typically meaningless) stats shown in the ESC menu by <nn> amount.",
+    "NAME": "ModPCMiscStat",
+    "params": ["<Stat>", "<nn>"]
+  },
+  "moveto ": {
+    "CODE": "moveto",
+    "details": "Move a character to specified actor and vice versa.",
+    "NAME": "moveto",
+    "params": ["<target>", "<actor ID>"]
+  },
+  "movetoqt ": {
+    "CODE": "movetoqt",
+    "details": "Move to quest target",
+    "NAME": "movetoqt",
+    "params": ["<quest ID>"]
+  },
+  "openactorcontainer": {
+    "CODE": "openactorcontainer",
+    "details": "Open a character's inventory.",
+    "NAME": "openactorcontainer",
+    "params": null
+  },
+  "paycrimegold": {
+    "CODE": "paycrimegold",
+    "details": "Pay the bounty.",
+    "NAME": "paycrimegold",
+    "params": ["<confiscate?>", "<faction ID>", "<jail?>"]
+  },
+  "pcb": {
+    "CODE": "pcb",
+    "details": "Purge cell buffer",
+    "NAME": "pcb",
+    "params": null
+  },
+  "placeatme ": {
+    "CODE": "placeatme",
+    "details": "Spawn specified actor or object at current position.",
+    "NAME": "placeatme",
+    "params": ["<actor/object ID>"]
+  },
+  "playidle ": {
+    "CODE": "playidle",
+    "details": "Play an animation (idle) on the specified actor.",
+    "NAME": "playidle",
+    "params": ["<target>", "<idle ID>"]
+  },
+  "prid ": {
+    "CODE": "prid",
+    "details": "Pick reference by ID",
+    "NAME": "prid",
+    "params": ["<RefID>"]
+  },
+  "psb": {
+    "CODE": "psb",
+    "details": "Player Spell Book",
+    "NAME": "psb",
+    "params": null
+  },
+  "pushactoraway ": {
+    "CODE": "pushactoraway",
+    "details": "Push an actor away in a random direction.",
+    "NAME": "pushactoraway",
+    "params": ["<actor ID>", "<number>"]
+  },
+  "qqq": {
+    "CODE": "qqq",
+    "details": "Fast quit.",
+    "NAME": "qqq",
+    "params": null
+  },
+  "recycleactor ": {
+    "CODE": "recycleactor",
+    "details": "Revive/Reset targeted NPC or object.",
+    "NAME": "recycleactor",
+    "params": ["<target>", "<destination reference (optional)>"]
+  },
+  "refini": {
+    "CODE": "refini",
+    "details": "Refreshes all settings.",
+    "NAME": "refini",
+    "params": null
+  },
+  "removeallitems ": {
+    "CODE": "removeallitems",
+    "details": "Remove all items from a character's inventory.",
+    "NAME": "removeallitems",
+    "params": ["<target>", "<actor or container ID>"]
+  },
+  "removeitem ": {
+    "CODE": "removeitem",
+    "details": "Remove the specified amount of an item from a character's inventory.",
+    "NAME": "removeitem",
+    "params": ["<target>", "<count>", "<item ID>"]
+  },
+  "removeperk ": {
+    "CODE": "removeperk",
+    "details": "Remove the specified perk from a character's skills.",
+    "NAME": "removeperk",
+    "params": ["<target>", "<perk ID>"]
+  },
+  "removespell ": {
+    "CODE": "removespell",
+    "details": "Removes a specific spell from a character's spell book. Also works with powers, abilities, blessings, and diseases, but not shouts",
+    "NAME": "removespell",
+    "params": ["<target>", "<spell ID>"]
+  },
+  "resetAI": {
+    "CODE": "resetAI",
+    "details": "Reset an NPC's AI.",
+    "NAME": "resetAI",
+    "params": null
+  },
+  "resethealth": {
+    "CODE": "resethealth",
+    "details": "Restore a character to full health.",
+    "NAME": "resethealth",
+    "params": null
+  },
+  "resetinterior ": {
+    "CODE": "resetinterior",
+    "details": "Reset an entire cell.",
+    "NAME": "resetinterior",
+    "params": ["<cellID>"]
+  },
+  "resetinventory": {
+    "CODE": "resetinventory",
+    "details": "Reset a container or a character's inventory.",
+    "NAME": "resetinventory",
+    "params": null
+  },
+  "resetquest ": {
+    "CODE": "resetquest",
+    "details": "Reset a quest.",
+    "NAME": "resetquest",
+    "params": ["<questID>"]
+  },
+  "RestoreActorValue ": {
+    "CODE": "RestoreActorValue",
+    "details": "Restore the value of attribute by <nn> amount",
+    "NAME": "RestoreActorValue",
+    "params": ["<target>", "<attribute>", "<nn>"]
+  },
+  "resurrect ": {
+    "CODE": "resurrect",
+    "details": "Resurrect target actor",
+    "NAME": "resurrect",
+    "params": ["<target>", "<1>"]
+  },
+  "saq": {
+    "CODE": "saq",
+    "details": "Start all quests",
+    "NAME": "saq",
+    "params": null
+  },
+  "save": {
+    "CODE": "save",
+    "details": "Write <name> gamesave.",
+    "NAME": "save",
+    "params": null
+  },
+  "saveini": {
+    "CODE": "saveini",
+    "details": "Save settings to file.",
+    "NAME": "saveini",
+    "params": null
+  },
+  "say ": {
+    "CODE": "say",
+    "details": "Makes the targeted actor say a specific dialog topic.",
+    "NAME": "say",
+    "params": ["<target>", "<dialog topic ID>"]
+  },
+  "set ": {
+    "CODE": "set",
+    "details": "Sets a global variable",
+    "NAME": "set",
+    "params": ["<Global Variable> to", "<Value>"]
+  },
+  "set gameday": {
+    "CODE": " set gameday to ##",
+    "details": "Sets the date",
+    "NAME": " set gameday to ##",
+    "params": null
+  },
+  "set gamedayspassed": {
+    "CODE": " set gamedayspassed to #",
+    "details": "Sets the number of days that have passed since starting the game",
+    "NAME": " set gamedayspassed to #",
+    "params": null
+  },
+  "set gamehour": {
+    "CODE": " set gamehour to ##",
+    "details": "Sets the time of day",
+    "NAME": " set gamehour to ##",
+    "params": null
+  },
+  "set gamemonth": {
+    "CODE": " set gamemonth to ##",
+    "details": "Sets the month",
+    "NAME": " set gamemonth to ##",
+    "params": null
+  },
+  "set Gameyear": {
+    "CODE": " set gameyear to ###",
+    "details": "Sets the year",
+    "NAME": " set gameyear to ###",
+    "params": null
+  },
+  "set playeranimalcount to ": {
+    "CODE": " set playeranimalcount to",
+    "details": "Sets number of animal followers",
+    "NAME": " set playeranimalcount to",
+    "params": ["<qty>"]
+  },
+  "set playerfollowercount to ": {
+    "CODE": " set playerfollowercount to",
+    "details": "Sets number of followers",
+    "NAME": " set playerfollowercount to",
+    "params": ["<qty>"]
+  },
+  "set timescale to ": {
+    "CODE": " set timescale to",
+    "details": "Sets the speed of how fast time advances in-game",
+    "NAME": " set timescale to",
+    "params": ["<qty>"]
+  },
+  "setactoralpha ": {
+    "CODE": "setactoralpha",
+    "details": "Change the selected actor's alpha/opacity.",
+    "NAME": "setactoralpha",
+    "params": ["<target>", "<0–100>"]
+  },
+  "setAV ": {
+    "CODE": "setAV",
+    "details": "Set value of attribute",
+    "NAME": "setAV",
+    "params": ["<target>", "<attribute>", "<nn>"]
+  },
+  "setessential ": {
+    "CODE": "setessential",
+    "details": "Set a character as mortal (0) or immortal (1).",
+    "NAME": "setessential",
+    "params": ["<0 or 1>", "<base ID>"]
+  },
+  "setghost ": {
+    "CODE": "setghost",
+    "details": "Set ghost mode for the targeted NPC.",
+    "NAME": "setghost",
+    "params": ["<target>", "<0 or 1>"]
+  },
+  "setgs ": {
+    "CODE": "setgs",
+    "details": "Set game setting.",
+    "NAME": "setgs",
+    "params": ["<setting>", "<value>"]
+  },
+  "setlevel ": {
+    "CODE": "setlevel",
+    "details": "Set NPC level",
+    "NAME": "setlevel",
+    "params": ["<target>", "<max>", "<min>", "<modifier>", "<multiplier>"]
+  },
+  "SetLocationCleared ": {
+    "CODE": "SetLocationCleared",
+    "details": "Set whether an area has been cleared.",
+    "NAME": "SetLocationCleared",
+    "params": ["<location ID> 1"]
+  },
+  "setnpcweight ": {
+    "CODE": "setnpcweight",
+    "details": "Set the weight of the selected NPC and updates the model to reflect the new weight.",
+    "NAME": "setnpcweight",
+    "params": ["<target>", "<0–100>\n(snpcw)"]
+  },
+  "setownership ": {
+    "CODE": "setownership",
+    "details": "Sets ownership of the targeted item.",
+    "NAME": "setownership",
+    "params": ["<target>", "<ID>"]
+  },
+  "setplayerrace": {
+    "CODE": "setplayerrace",
+    "details": "Set player race.",
+    "NAME": "setplayerrace",
+    "params": null
+  },
+  "setrace ": {
+    "CODE": "setrace",
+    "details": "Change a character's race.",
+    "NAME": "setrace",
+    "params": ["<target>", "<race>"]
+  },
+  "setrelationshiprank ": {
+    "CODE": "setrelationshiprank",
+    "details": "Change the relationship between two actors",
+    "NAME": "setrelationshiprank",
+    "params": ["<target>", "<#>", "<NPC refID>"]
+  },
+  "setscale ": {
+    "CODE": "setscale",
+    "details": "Scale size of target.",
+    "NAME": "setscale",
+    "params": ["<target>", "<#>"]
+  },
+  "setstage ": {
+    "CODE": "setstage",
+    "details": "Set the current stage of the given quest.",
+    "NAME": "setstage",
+    "params": ["<quest ID>", "<stage #>"]
+  },
+  "setunconscious ": {
+    "CODE": "setunconscious",
+    "details": "A value of 1 will be unconscious",
+    "NAME": "setunconscious",
+    "params": ["<target>", "<integer>"]
+  },
+  "SexChange": {
+    "CODE": "SexChange",
+    "details": "Switches the player or an NPC's gender",
+    "NAME": "SexChange",
+    "params": null
+  },
+  "SGTM": {
+    "CODE": "SGTM",
+    "details": "Changes the Gametime Multiplier to a specified value for slow motion, and fast forward type effects",
+    "NAME": "SGTM",
+    "params": null
+  },
+  "show inventory": {
+    "CODE": "inv/showinventory",
+    "details": "Display the base IDs of every item in a character's inventory.",
+    "NAME": "inv/showinventory",
+    "params": null
+  },
+  "ShowGlobalVars": {
+    "CODE": "ShowGlobalVars",
+    "details": "Shows all current game variables",
+    "NAME": "ShowGlobalVars",
+    "params": null
+  },
+  "ShowMessage": {
+    "CODE": "ShowMessage",
+    "details": "Shows a message",
+    "NAME": "ShowMessage",
+    "params": null
+  },
+  "showracemenu": {
+    "CODE": "showracemenu",
+    "details": "Opens the character creation menu.",
+    "NAME": "showracemenu",
+    "params": null
+  },
+  "showracemenu ": {
+    "CODE": "showracemenu",
+    "details": "Changes the player's race.",
+    "NAME": "showracemenu",
+    "params": ["<target>", "<race>"]
+  },
+  "shp ": {
+    "CODE": "shp",
+    "details": "Set HDR parameters",
+    "NAME": "shp",
+    "params": ["<parameter #1-parameter #9>"]
+  },
+  "sifh ": {
+    "CODE": "sifh",
+    "details": "Set whether an actor should ignore friendly hits.",
+    "NAME": "sifh",
+    "params": ["<target>", "<#>"]
+  },
+  "slst": {
+    "CODE": "s1st",
+    "details": "Shows 1st person model in 3rd person",
+    "NAME": "s1st",
+    "params": null
+  },
+  "spf ": {
+    "CODE": "spf",
+    "details": "Save PC Face",
+    "NAME": "spf",
+    "params": ["<file name>"]
+  },
+  "sqo": {
+    "CODE": "sqo",
+    "details": "Itemizes quest objectives and their states",
+    "NAME": "sqo",
+    "params": null
+  },
+  "sqs ": {
+    "CODE": "sqs",
+    "details": "Display stages of a quest",
+    "NAME": "sqs",
+    "params": ["<quest ID>"]
+  },
+  "sqt": {
+    "CODE": "sqt",
+    "details": "List quest ids and targets",
+    "NAME": "sqt",
+    "params": null
+  },
+  "sqv ": {
+    "CODE": "sqv",
+    "details": "Show quest variables",
+    "NAME": "sqv",
+    "params": ["<questID>"]
+  },
+  "stopcombat": {
+    "CODE": "stopcombat",
+    "details": "Stop combat with a targetted NPC",
+    "NAME": "stopcombat",
+    "params": null
+  },
+  "stp ": {
+    "CODE": "stp",
+    "details": "Set tint parameters",
+    "NAME": "stp",
+    "params": ["<chroma>", "<unknown1>", "<unknown2>", "<unknown3>"]
+  },
+  "str ": {
+    "CODE": "str",
+    "details": "Set the refraction value of the selected target.",
+    "NAME": "str",
+    "params": ["<target>", "<0–1.000000>"]
+  },
+  "sucsm": {
+    "CODE": "sucsm",
+    "details": "Changes the speed of the free-flying camera (UFO cam)",
+    "NAME": "sucsm",
+    "params": ["<number>"]
+  },
+  "tai": {
+    "CODE": "tai",
+    "details": "Toggle AI",
+    "NAME": "tai",
+    "params": null
+  },
+  "tb": {
+    "CODE": "tb",
+    "details": "Toggle Borders",
+    "NAME": "tb",
+    "params": null
+  },
+  "tc": {
+    "CODE": "tc",
+    "details": "Toggle controls driven",
+    "NAME": "tc",
+    "params": null
+  },
+  "tcai": {
+    "CODE": "tcai",
+    "details": "Toggle Combat AI",
+    "NAME": "tcai",
+    "params": null
+  },
+  "tcl": {
+    "CODE": "tcl",
+    "details": "Toggle collision (clipping, noclip)",
+    "NAME": "tcl",
+    "params": null
+  },
+  "tdetect": {
+    "CODE": "tdetect",
+    "details": "Toggle AI Detection",
+    "NAME": "tdetect",
+    "params": null
+  },
+  "teachword ": {
+    "CODE": "teachword",
+    "details": "Teach a dragon shout.",
+    "NAME": "teachword",
+    "params": ["<target>", "<word>"]
+  },
+  "teofis": {
+    "CODE": "teofis",
+    "details": "Toggle End-Of-Frame ImageSpace",
+    "NAME": "teofis",
+    "params": null
+  },
+  "tfc": {
+    "CODE": "tfc",
+    "details": "Freeflying camera",
+    "NAME": "tfc",
+    "params": ["<1>"]
+  },
+  "tfow": {
+    "CODE": "tfow",
+    "details": "Toggle Fog of War",
+    "NAME": "tfow",
+    "params": null
+  },
+  "tg": {
+    "CODE": "tg",
+    "details": "Toggle grass",
+    "NAME": "tg",
+    "params": null
+  },
+  "tgm": {
+    "CODE": "tgm",
+    "details": "Toggle god mode",
+    "NAME": "tgm",
+    "params": null
+  },
+  "tim": {
+    "CODE": "tim",
+    "details": "Toggle immortal mode",
+    "NAME": "tim",
+    "params": null
+  },
+  "tll": {
+    "CODE": "tll",
+    "details": "Toggle LOD",
+    "NAME": "tll",
+    "params": null
+  },
+  "tm": {
+    "CODE": "tm",
+    "details": "Toggle menus (HUD)",
+    "NAME": "tm",
+    "params": null
+  },
+  "tmm": {
+    "CODE": "tmm",
+    "details": "Show/hide all map markers",
+    "NAME": "tmm",
+    "params": ["<discovered?>,", "<includehidden?>)", "<show?>(,"]
+  },
+  "ts": {
+    "CODE": "ts",
+    "details": "Toggle sky",
+    "NAME": "ts",
+    "params": null
+  },
+  "tscr": {
+    "CODE": "tscr",
+    "details": "Toggle script processing.",
+    "NAME": "tscr",
+    "params": null
+  },
+  "tt": {
+    "CODE": "tt",
+    "details": "Toggle trees",
+    "NAME": "tt",
+    "params": null
+  },
+  "twf": {
+    "CODE": "twf",
+    "details": "Toggle wireframe",
+    "NAME": "twf",
+    "params": null
+  },
+  "tws": {
+    "CODE": "tws",
+    "details": "Toggle water system",
+    "NAME": "tws",
+    "params": null
+  },
+  "unequipitem ": {
+    "CODE": "unequipitem",
+    "details": "Unequip item from selected NPC",
+    "NAME": "unequipitem",
+    "params": ["<target>", "<Item baseID>"]
+  },
+  "unlock": {
+    "CODE": "unlock",
+    "details": "Unlock the targeted object.",
+    "NAME": "unlock",
+    "params": null
+  },
+  "unlockword ": {
+    "CODE": "unlockword",
+    "details": "Unlock a dragon shout.",
+    "NAME": "unlockword",
+    "params": ["<target>", "<word>"]
+  }
+}

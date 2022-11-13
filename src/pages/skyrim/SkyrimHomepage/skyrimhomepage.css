@@ -1,0 +1,4 @@
+.homepage {
+  grid-area: body;
+  display: grid;
+}

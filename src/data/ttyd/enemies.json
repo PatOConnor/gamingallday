@@ -1,0 +1,65 @@
+{
+
+  "0":{
+    "id": "0",
+    "enemyName": "Lord Crump",
+    "hp": 5,
+    "def": 0,
+    "attack": "Ground Pound: 1 Damage",
+    "tattle": "unavailable",
+    "tips": "This is the intro fight with Lord Crump! If you can superguard his ground pound and nail both action commands, you can get done with the fight before he even has the time to attack you twice!"
+  },
+  "1":{
+    "id": "1",
+    "enemyName": "Goomba",
+    "location":["Rogueport Sewers", "Petal Meadows"],
+    "hp": 2,
+    "def": 0,
+    "attacks": "Headbonk: 1 Damage",
+    "tattle": "The underling of underlings. No other distinguishing characteristics.",
+    "tips": "The first low-level enemy you encounter in the game, there's not much to say about it. Very easy to defeat."
+  },
+  "2":{
+    "id": "2",
+    "enemyName": "ParaGoomba",
+    "location":["Rogueport Sewers"],
+    "hp": 2,
+    "def": 0,
+    "attacks": "Parabonk: 1 Damage",
+    "tattle": "A Goomba with wings. Can't reach it with a hammer while it's in the air, but once it's damaged, its wings get clipped. It's kind of sad really.",
+    "tips": "Paragoombas and other flying enemies are immune to hammers and other ground-based attacks in battle, but can be succesfully struck by them in the overworld for a first strike!"
+  },
+  "3":{
+    "id": "3",
+    "enemyName": "Spiky Goomba",
+    "location":["Rogueport Sewers"],
+    "hp": 2,
+    "def": 0,
+    "attacks": "Spiky Headbonk: 2 Damage",
+    "tattle": "A Goomba that wears a spiked helmet. Slighty higher attack power than a typical Goomba.",
+    "tips": ""
+  },
+
+  "4":{
+    "id": "4",
+    "enemyName": "Gus",
+    "location":["East Rogueport"],
+    "hp": 2,
+    "def": 0,
+    "attacks": "",
+    "tattle": "",
+    "tips": ""
+  },
+  
+  "98":{
+    "id": "98",
+    "enemyName": "Blooper",
+    "location":["Rogueport Sewers"],
+    "imgurl":"tattle192-blooper.png",
+    "hp": "20. Tentacle: 5",
+    "def": "0",
+    "attacks": "Inkjet: 5 Damage @all. Jump: 5 Damage @one Tentacles: 3 Damage @one",
+    "tattle": "A giant, squid like thing that attacks with its ink and tentacles. Based on its dialect, it may come from the western sea.",
+    "tips": "Blooper is the first boss of the game. If you have a fire flower in your inventory, use it to take out the tentacles immediately. If not, you'll have to take them down separately, and they'll attack each turn they're on the field. Once you take down the tentacles, Blooper will fall onto the ground and become immobile for two turns, before getting up and resuming its attacks. Keep an eye on your HP, and it should be easy."
+  }
+}

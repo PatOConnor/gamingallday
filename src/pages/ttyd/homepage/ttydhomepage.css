@@ -1,0 +1,121 @@
+:root {
+  --scroll-time: 1.4s;
+  --col1-delay: 0s;
+  --col2-delay: 0.3s;
+}
+
+.ttydboard {
+  display: grid;
+  grid-template-areas:
+    "gamehead gamehead"
+    "main walk"
+    "main  .  ";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 10vh 60vh 10vh;
+}
+
+.game-header {
+  grid-area: gamehead;
+  text-align: center;
+}
+
+
+.gridboard {
+  grid-area: main;
+  display: grid;
+
+  grid-template-areas:
+    "item part"
+    "star badg"
+    "spec enem"
+    "cook shop"
+    "trou strat"
+    "pit extl"; 
+}
+.star {grid-area: star;}
+.part {grid-area: part;}
+.item {grid-area: item;}
+.badg {grid-area: badg;}
+.enem {grid-area: enem;}
+.spec {grid-area: spec;}
+.cook {grid-area: cook;}
+.shop {grid-area: shop;}
+.trou {grid-area: trou;}
+.pit {grid-area: pit;}
+.strat {grid-area: strat;}
+.extl {grid-area: extl;}
+
+/* Main Page Links */
+.col1 {
+  -webkit-animation: column1 var(--scroll-time) forwards;
+  animation: slide var(--scroll-time) forwards;
+  /* -webkit-animation-delay: 2s; */
+  /* animation-delay: 2s; */
+}
+.col2 {
+  margin-top: 30px;
+  margin-left: 20vw;
+  
+  -webkit-animation: column1 var(--scroll-time) forwards;
+  -webkit-animation-delay: var(--col2-delay);
+
+  animation: slide var(--scroll-time) forwards;
+  animation-delay: var(--col2-delay);
+}
+.pagelink{
+  left: -70vw;
+  text-overflow: ellipsis;
+  position: absolute;
+  text-align: center;
+  /* border: 2px solid white; */
+  width: 20vw;
+  font-size: larger;
+}
+
+
+.walkthrough {
+  grid-area: walk;
+  display: grid;
+  grid-template-rows: 2em 1fr;
+  grid-auto-flow: row;
+  grid-auto-rows: 1fr;
+}
+
+.walkthrough > a > p{ 
+  position: absolute;
+  left: 100vw;
+  -webkit-animation: column3 var(--scroll-time) forwards;
+  /* -webkit-animation-delay: 2s; */
+  animation: column3 var(--scroll-time) forwards;
+  /* animation-delay: 2s; */
+}
+
+
+
+
+
+
+
+@keyframes column1 {
+  100% { left: 5vw; }
+}
+
+@-webkit-keyframes column1 {
+  100% { left: 5vw; }
+}
+
+@keyframes column2 {
+    100% { left: 20vw; }
+}
+  
+@-webkit-keyframes column2 {
+  100% { left: 20vw; }
+}
+
+@keyframes column3 {
+  100% {left: 65vw;}
+}
+
+@-webkit-keyframes column3 {
+  100% {left: 65vw;}
+}

@@ -1,0 +1,106 @@
+.walkthrough-grid {
+  display: grid;
+  grid-template-areas: "gamehead";
+  grid-auto-flow: row;
+  gap: 60px;
+  text-align: center;
+}
+
+.game-header {
+  grid-area: gamehead;
+}
+
+/* Main Block of game walkthrough */
+.walkthrough-row {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+  grid-template-columns: 3fr 5fr;
+}
+
+.walkthrough-row:nth-child(even) {
+  direction: rtl;
+}
+
+.walkthrough-row > img {
+  /* dummy border for testing */
+  border: 2px solid black;
+}
+
+.walkthrough-footer {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+/* Enemy Cards */
+.enemies-wrapper {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 60px;
+}
+
+.enemyCardOuter {
+  box-shadow: 4px 8px 12px lavender;
+  background: lavender;
+  border-radius: 5px;
+}
+.enemyCardInner {
+  margin: 5px;
+  background: slateblue;
+  display: grid;
+  grid-template-areas:
+    "image  info"
+    "tattle tips";
+}
+/* Enemy Card Interior Elements */
+.imageWrapper {
+  grid-area: image;
+  border: 2px dashed lavender;
+}
+
+.tattleWrapper {
+  grid-area: tattle;
+}
+
+.tipsWrapper {
+  grid-area: tips;
+}
+
+.infoWrapper {
+  padding-top: 5px;
+  grid-area: info;
+  display: grid;
+  grid-template-areas:
+    "NAME  NAME"
+    "HP    DEF"
+    "LOC   ATK";
+}
+/* Enemy Info Interior Elements */
+.NAME {
+  grid-area: NAME;
+}
+.HP {
+  grid-area: HP;
+  margin-left: 20px;
+}
+.DEF {
+  grid-area: DEF;
+  margin-right: 20px;
+}
+.LOC {
+  grid-area: LOC;
+  margin-left: 20px;
+}
+.ATK {
+  grid-area: ATK;
+  margin-right: 20px;
+}
+
+.LOC > ul {
+  text-align: left;
+  list-style-type: none;
+}
+
+.LOC > ul > li {
+  
+}

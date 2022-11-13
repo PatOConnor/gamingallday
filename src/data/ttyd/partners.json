@@ -1,0 +1,56 @@
+{
+  "goombella": {
+    "partnerName": "",
+    "mainImgUrl": "",
+    "desc": "",
+    "stats": {
+      "def": 0,
+      "baseHP": 10,
+      "superHP": 20,
+      "ultraHP": 30
+    },
+    "overworldAction": {
+      "actionName": "Tattle",
+      "actionDescription": "Press X on the overworld to get information about the board you're located on. If you walk up to a character you can speak to, you'll get information on them as well!",
+      "actionImgUrl": ""
+    },
+    "moves": [
+      {
+        "moveName": "headbonk",
+        "damage": "2 x2",
+        "moveImgUrl": "",
+        "moveDesc": "Make an attack on one enemy very similar to Mario's jump. If the enemy has spikes, goombella will take damage.",
+        "actionCommand": "Press A when goombella makes contact with the enemy to land an additional hit.",
+        "stylishTiming": "Right before Goombella jumps."
+      },
+      {
+        "moveName": "tattle",
+        "damage": "N/A",
+        "moveImgUrl": "",
+        "moveDesc": "Look up an enemy in the tattle log to reveal their HP bar and information in the journal",
+        "actionCommand": "Press A when the moving cursor is over the enemy.",
+        "stylishTiming": "Right after hitting the action command.",
+        "notes": ""
+      },
+      {
+        "moveName": "Multibonk",
+        "damage": "2--",
+        "moveImgUrl": "",
+        "moveDesc": "Make an attack on one enemy similar to Mario's Power Jump badge move.",
+        "actionCommand": "Press A when goombella makes contact with the enemy to land an additional hit.",
+        "stylishTiming": "Right before Goombella jumps.",
+        "notes": ""
+      },
+      {
+        "moveName": "Rally Wink",
+        "damage": "N/A",
+        "moveImgUrl": "",
+        "moveDesc": "Complete the action command to tranfer Goombella's move slot to Mario for an additional move.",
+        "actionCommand": "Mash A or B depending on which icon is larger on-screen.",
+        "stylishTiming": "",
+        "notes": ""
+      }
+    ]
+  },
+  "koops": {}
+}
