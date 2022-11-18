@@ -1,31 +1,67 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const SearchBar = ({ id, text, data, isTarget }) => {
-  const defaultWord = isTarget ? "player" : "";
-
+  const [enteredWord, setEnteredWord] = useState(isTarget ? "player" : "");
+  const [showingResults, setShowingResults] = useState(false);
   const [resultData, setResultData] = useState([]);
-  const [enteredWord, setEnteredWord] = useState(defaultWord);
-  const [showResults, setShowResults] = useState(false)
 
-  // REPLACE THIS COMMENT WITH PLAN ON HOW TO REFACTOR AND ADD MEMOIZATION
-  const handleFilter = (event) => {
+  /// Need to make resultData into an array with a "key" prop
+  //this will allow me to use it as a dependency in the  useEffect hook
+
+  useEffect(() => {
+    // set to true when object updates; closure is manual by user
+    setShowingResults(true);
+  }, resultData);
+
+  const handleTextUpdate = (event) => {
+    clearTimeout();
     const searchWord = event.target.value;
     setEnteredWord(searchWord);
-    const filteredData = Object.entries(data).filter((key, value) => {
-      // console.log(key)
-      //idk why key[1] is where the data goes but so it goes
-      // console.log(key[1], key[1].NAME.includes(searchWord));
-      return key[1].NAME.toLowerCase().includes(searchWord.toLowerCase());
-    });
-    setResultData(Object.fromEntries(filteredData));
-    setShowResults(true)
+    setTimeout(() => {
+      updateSearch(searchWord);
+    }, 500);
   };
 
-  const clearValue = (event) => {
+  const updateSearch = (searchWord) => {
+    const dataSet =
+      resultData.length === 0
+        ? ["", Object.entries(data)]
+        : (() => {
+            let closestMatch;
+            resultData.forEach((item, index) => {
+              let word = item[0];
+              if (searchWord.includes(word) && word.includes(closestMatch)) {
+                closestMatch = index;
+              }
+            });
+            console.table([
+              ["what is closest match?", closestMatch],
+              ["what is dataSet?", dataSet],
+            ]);
+            return resultData[closestMatch];
+          })();
+
+    console.log(dataSet);
+    // "value" is unused but it breaks if it is missing
+    const filteredData = dataSet[1].filter((key, value) => {
+      return key[1].NAME.toLowerCase().includes(searchWord.toLowerCase());
+    });
+    console.log(filteredData);
+    console.log(
+      "maybe the setState assignment doesn't work",
+      resultData,
+      searchWord,
+      filteredData
+    );
+
+    setResultData([...resultData, [searchWord, filteredData]]);
+  };
+
+  const clearValue = () => {
     setEnteredWord("");
   };
 
-  const closeSearchPane = (event) => {
-    setShowResults(false)
+  const closeSearchPane = () => {
+    setShowingResults(false);
   };
 
   return (
@@ -36,22 +72,21 @@ const SearchBar = ({ id, text, data, isTarget }) => {
           type="text"
           placeholder={text}
           value={enteredWord}
-          onChange={handleFilter}
+          onChange={handleTextUpdate}
           istarget={isTarget.toString()}
         ></input>
 
         <span className="clearButton" onClick={clearValue}>
-        ❌Clear Search Text
+          ❌
         </span>
         <span className="minimizeButton" onClick={closeSearchPane}>
-        🤏Minimize Results
+          🤏
         </span>
       </div>
-      <div className={`dataResult  ${showResults ? "" : "hidden"}`}>
+      <div className={`dataResult  ${showingResults ? "" : "hidden"}`}>
         {/* turning an object of objects into a list of tags */}
-        {Object.entries(resultData)
-          .slice(0, 30)
-          .map((key, value) => {
+        {[] ||
+          resultData[enteredWord].slice(0, 30).map((key, value) => {
             return (
               <div
                 className="searchOutput"
@@ -67,5 +102,22 @@ const SearchBar = ({ id, text, data, isTarget }) => {
     </div>
   );
 };
+
+// // replace with ternary for readability? Leaving it here if its broken
+// let dataSet;
+// if (resultData.length === 0) {
+//   //first search uses full dataset, converted into array
+//   dataSet = ["", data.entries()];
+// } else {
+//   let closestMatch;
+//   resultData.forEach((item, index) => {
+//     let word = item[0]
+//     if (searchWord.includes(word) && word.includes(closestMatch)) {
+//       closestMatch = index;
+//     }
+//   });
+//   dataSet = resultData[closestMatch];
+//   console.table([['what is closest match?', closestMatch], ["what is dataSet?", dataSet]])
+// }
 
 export default SearchBar;

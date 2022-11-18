@@ -16,6 +16,8 @@
   grid-auto-flow: column;
   gap: 20px;
   grid-template-columns: 3fr 5fr;
+  background-color: rgb(202, 119, 84);
+  border: 3px solid rgba(0, 0, 0, 40);
 }
 
 .walkthrough-row:nth-child(even) {
@@ -25,6 +27,8 @@
 .walkthrough-row > img {
   /* dummy border for testing */
   border: 2px solid black;
+  width: 480px;
+  height: 270px;
 }
 
 .walkthrough-footer {
@@ -46,7 +50,7 @@
 }
 .enemyCardInner {
   margin: 5px;
-  background: slateblue;
+  background: rgb(205, 119, 90);
   display: grid;
   grid-template-areas:
     "image  info"
