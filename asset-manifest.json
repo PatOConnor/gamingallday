@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/gamingallday/static/css/main.7c2ffe13.css",
-    "main.js": "/gamingallday/static/js/main.72c22532.js",
+    "main.js": "/gamingallday/static/js/main.6ebe321c.js",
     "static/js/787.2f911e31.chunk.js": "/gamingallday/static/js/787.2f911e31.chunk.js",
     "static/media/HappyMonkey-Regular.ttf": "/gamingallday/static/media/HappyMonkey-Regular.092e30a6d1de91845edd.ttf",
     "index.html": "/gamingallday/index.html",
     "main.7c2ffe13.css.map": "/gamingallday/static/css/main.7c2ffe13.css.map",
-    "main.72c22532.js.map": "/gamingallday/static/js/main.72c22532.js.map",
+    "main.6ebe321c.js.map": "/gamingallday/static/js/main.6ebe321c.js.map",
     "787.2f911e31.chunk.js.map": "/gamingallday/static/js/787.2f911e31.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7c2ffe13.css",
-    "static/js/main.72c22532.js"
+    "static/js/main.6ebe321c.js"
   ]
 }
