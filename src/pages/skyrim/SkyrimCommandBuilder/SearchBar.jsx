@@ -22,6 +22,7 @@ const SearchBar = ({ id, text, data, isTarget }) => {
 
   const clearValue = (event) => {
     setEnteredWord("");
+    setShowResults(false)
   };
 
   const closeSearchPane = (event) => {
@@ -41,16 +42,16 @@ const SearchBar = ({ id, text, data, isTarget }) => {
         ></input>
 
         <span className="clearButton" onClick={clearValue}>
-        ❌Clear Search Text
+        ❌Clear
         </span>
         <span className="minimizeButton" onClick={closeSearchPane}>
-        🤏Minimize Results
+        🤏Minimize
         </span>
       </div>
       <div className={`dataResult  ${showResults ? "" : "hidden"}`}>
         {/* turning an object of objects into a list of tags */}
         {Object.entries(resultData)
-          .slice(0, 30)
+          .slice(0, 50)
           .map((key, value) => {
             return (
               <div

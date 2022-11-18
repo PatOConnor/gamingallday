@@ -50,6 +50,16 @@ const ParamInputTray = ({ currentCommand, commandsList, setCommandsList }) => {
     setCommandsList([...commandsList, target + cmd]);
   };
 
+  const downloadTxtFile = () => {
+    const element = document.createElement("a");
+    const file = new Blob(commandsList.map(elem => elem+"\n"), {type: 'text/plain'});
+    element.href = URL.createObjectURL(file);
+    element.download = "commands.txt";
+    document.body.appendChild(element); // Required for this to work in FireFox
+    element.click();
+    document.body.removeChild(element); // preventing memory leak
+  }
+
   return (
     <div id="input-tray">
       <h3>{currentCommand.NAME}</h3>
@@ -66,6 +76,7 @@ const ParamInputTray = ({ currentCommand, commandsList, setCommandsList }) => {
         })}
       </div>
       <Button onClick={addCommand}>Add Your Command</Button>
+      <Button onClick={downloadTxtFile}>Download Commands</Button>
     </div>
   );
 };

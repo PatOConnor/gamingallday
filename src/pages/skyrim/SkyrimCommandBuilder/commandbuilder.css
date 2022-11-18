@@ -41,7 +41,7 @@ li {
 
 .dataResult {
   width: 300px;
-  height: 200px;
+  max-height: 200px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow-y: scroll;
   /* hide scrollbar on IE, edge */
