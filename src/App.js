@@ -18,8 +18,11 @@ import TtydHomepage from './pages/ttyd/homepage/TtydHomepage'
 import TtydPrologue from './pages/ttyd/walkthrough/prologue/TtydPrologue'
 
 const App = () => {
+
+  const basename = document.querySelector('base')?.getAttribute('href') ?? '/'    
+
   return (<div id='global-wrapper' className='global-wrapper'>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Header/>
       
       <Routes>
