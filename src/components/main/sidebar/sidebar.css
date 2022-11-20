@@ -1,0 +1,32 @@
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  margin-top: 11.5vh;
+  width: 200vw;
+  left: 100vw;
+  transition: 0.5s;
+
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+
+}
+.sidebar::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+/* looks smoother if content within sidebar loads a bit earlier */
+.sidebar > element {
+  transition: 0.3s;
+}
+
+.showing {
+  left: calc(100vw - 600px);
+}
+
+@media screen and (orientation: portrait) {
+  .showing {
+    left: 20vw
+  } 
+}

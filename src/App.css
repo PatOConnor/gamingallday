@@ -21,6 +21,9 @@
     " . footer . ";
 }
 
+
+
+
 body {
 	/* background: linear-gradient(-45deg, #080302, #b41010, #160a81, #10493c); */
   /* background: linear-gradient(-45deg, #f44320, #d80c0c, #bcbcbf, #f8ab04); */
@@ -63,9 +66,25 @@ footer {
   display: grid;
   grid-auto-flow: column;
   place-items: center;
+  
 }
 
-.main-content {
+@media screen and (orientation: portrait) {
+  .global-wrapper {
+    grid-template-rows: 100px 1fr 100px;
+  }
+
+  footer {
+    padding-top: 8px;
+    place-items: start;
+    justify-items: center;
+  }
+
+}
+
+
+
+.mainWrapper, .main-content {
   grid-area: body;
   overflow-y: scroll;
   /* hide scrollbar on IE, edge */

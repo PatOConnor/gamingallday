@@ -9,10 +9,21 @@
   grid-template-columns: 1fr 4fr 1fr;
 }
 .titleWrapper > div {
-  text-align: right;
+  text-align: left;
   font-size: 2em;
 }
 
+
+.bodyWrapper {
+  overflow: scroll;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
 
 .bodyWrapper > h6 {
   font-size: 1.1em;
