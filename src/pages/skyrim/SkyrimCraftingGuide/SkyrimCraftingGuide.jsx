@@ -6,6 +6,7 @@ const SkyrimCraftingGuide = () => {
   return (
     <Article
       title="Skyrim Crafting Basics"
+      hasTableOfContents={true}
       body={
         <>
           <h3 id="h-types-of-crafting">Types of Crafting</h3>

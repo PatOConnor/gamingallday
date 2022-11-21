@@ -16,11 +16,11 @@ const TableOfContents = () => {
   }, []);
 
   return (
-    <div className="tableOfContents">
-      <ul>
+    <div className="tableOfContentsWrapper">
+      <ul className="tableOfContents">
         {headings.map((heading) => (
           <li key={heading.id} style={{ marginLeft: `${heading.level - 2}em` }}>
-            <HashLink to={`#${heading.id}`}>{heading.text}</HashLink>
+            <HashLink smooth to={`#${heading.id}`}>{heading.text}</HashLink>
           </li>
         ))}
       </ul>

@@ -1,8 +1,13 @@
-.tableOfContents {
+.tableOfContentsWrapper {
   background-color: slategray;
   border: 2px white;
+  height: 100%;
+  padding-top: 10vh;
+  overflow-y: scroll;
 }
-
+.tableOfContents {
+  width: 70vw;
+}
 
 
 

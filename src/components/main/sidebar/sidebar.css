@@ -1,12 +1,12 @@
 .sidebar {
   position: fixed;
   height: 100vh;
-  margin-top: 11.5vh;
+  /* margin-top: 11.5vh; */
   width: 200vw;
   left: 100vw;
   transition: 0.5s;
 
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
   scrollbar-width: none;
@@ -19,6 +19,10 @@
 /* looks smoother if content within sidebar loads a bit earlier */
 .sidebar > element {
   transition: 0.3s;
+}
+
+.sidebar > .closeButton {
+  position: relative;
 }
 
 .showing {

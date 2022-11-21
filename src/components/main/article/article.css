@@ -34,7 +34,12 @@
   list-style-type:square;
 }
 
-.bodyWrapper > ul {
+.bodyWrapper > .mainLinks {
+  text-align: center;
+  width: 100%;
+}
+
+.bodyWrapper > ul.group {
   display: flex;
   justify-content: space-around;
   height: min-content;

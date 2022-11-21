@@ -132,10 +132,11 @@ const SmithingGuide = () => {
       </p>
 
       <h4 id="h-smithing-perks">Recommended Perks</h4>
-      <ul>
+      <ul className="group">
         <li>Steel Smithing</li>
         <li>Arcane Smithing</li>
       </ul>
+      
       <p>
         The only perks that are useful regardless of build are these two,
         because they allow you to freely improve pieces of enchanted equipment,
