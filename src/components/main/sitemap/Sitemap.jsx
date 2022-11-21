@@ -1,19 +1,29 @@
 // content for sidebar to display on left
-import Sidebar from "../sidebar/Sidebar"
-const Sitemap = ({showingSitemap, handleShowingSitemap}) => {
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Sidebar from "../sidebar/Sidebar";
 
-  return (
+const Sitemap = ({ showingSitemap, handleShowingSitemap }) => {
+  return (<>
+    <Button onClick={handleShowingSitemap}>Click</Button>
     <Sidebar
       sidebarState={showingSitemap}
       handleStateCallback={handleShowingSitemap}
-
-      jsxContent={<div className="sitemap-wrapper">
-        <div className="sitemap">
-          <ul>
-              {/* put sitemap stuff here */}
-          </ul>
+      jsxContent={
+        <div className="sitemap-wrapper">
+          <div className="sitemap">
+            <ul>
+              <li style={{ marginLeft: "em" }}>
+                <Link to="/">Home</Link>
+                <Link to="/cheats">Cheats</Link>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>}
+      }
       />
-  )
-}
+      </>
+  );
+};
+
+export default Sitemap

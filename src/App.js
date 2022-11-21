@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import { useState } from "react";
 //main site imports
 import Header from "./components/main/header/Header";
 import Footer from "./components/main/footer/Footer";
+import Sitemap from "./components/main/sitemap/Sitemap";
 
 import Homepage from "./pages/homepage/Homepage";
 import About from "./pages/about/About";
@@ -18,7 +19,9 @@ import "./App.css";
 import TtydHomepage from "./pages/ttyd/homepage/TtydHomepage";
 import TtydPrologue from "./pages/ttyd/walkthrough/prologue/TtydPrologue";
 
+
 const App = () => {
+  const [showingSitemap, setShowingSitemap] = useState(true)
   const basename = document.querySelector("base")?.getAttribute("href") ?? "/";
   
   return (
@@ -26,6 +29,8 @@ const App = () => {
       <BrowserRouter basename={basename}>
         <Header />
         <Footer />
+        <Sitemap showingSitemap={showingSitemap} handleShowingSitemap={() => {setShowingSitemap(!showingSitemap)}}/>
+
 
         <Routes>
           <Route path="/" element={<Homepage />}></Route>
