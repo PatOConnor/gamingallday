@@ -5,7 +5,7 @@ import Sidebar from "../sidebar/Sidebar";
 
 const Sitemap = ({ showingSitemap, handleShowingSitemap }) => {
   return (<>
-    <Button onClick={handleShowingSitemap}>Click</Button>
+    {/* <Button onClick={handleShowingSitemap}>Click</Button> */}
     <Sidebar
       sidebarState={showingSitemap}
       handleStateCallback={handleShowingSitemap}
@@ -15,7 +15,13 @@ const Sitemap = ({ showingSitemap, handleShowingSitemap }) => {
             <ul>
               <li style={{ marginLeft: "em" }}>
                 <Link to="/">Home</Link>
-                <Link to="/cheats">Cheats</Link>
+              </li>
+              <li>
+                <Link to="/skyrim">Skyrim</Link>
+              </li>
+
+              <li>
+                <Link to="/ttyd">Paper Mario: The Thousand Year Door</Link>
               </li>
             </ul>
           </div>

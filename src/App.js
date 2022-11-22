@@ -7,7 +7,6 @@ import Sitemap from "./components/main/sitemap/Sitemap";
 
 import Homepage from "./pages/homepage/Homepage";
 import About from "./pages/about/About";
-import CheatsHomepage from "./pages/cheatsHomepage/CheatsHomepage";
 
 //skyrim section
 import SkyrimHomepage from "./pages/skyrim/SkyrimHomepage/SkyrimHomepage";
@@ -19,47 +18,45 @@ import "./App.css";
 import TtydHomepage from "./pages/ttyd/homepage/TtydHomepage";
 import TtydPrologue from "./pages/ttyd/walkthrough/prologue/TtydPrologue";
 
-
 const App = () => {
-  const [showingSitemap, setShowingSitemap] = useState(true)
+  const [showingSitemap, setShowingSitemap] = useState(false);
   const basename = document.querySelector("base")?.getAttribute("href") ?? "/";
-  
+  const handleShowingSiteMap = () => {setShowingSitemap(!showingSitemap);}
+
   return (
     <div id="global-wrapper" className="global-wrapper">
       <BrowserRouter basename={basename}>
-        <Header />
+        <Header 
+        handleShowingSitemap={handleShowingSiteMap}
+        />
         <Footer />
-        <Sitemap showingSitemap={showingSitemap} handleShowingSitemap={() => {setShowingSitemap(!showingSitemap)}}/>
-
+        <Sitemap
+          showingSitemap={showingSitemap}
+          handleShowingSitemap={handleShowingSiteMap}
+        />
 
         <Routes>
-          <Route path="/" element={<Homepage />}></Route>
+          <Route path="/" element={<Homepage handleShowingSitemap={handleShowingSiteMap}/>}></Route>
           <Route path="about" element={<About />}></Route>
-          <Route path="cheats">
-            <Route index element={<CheatsHomepage />} />
 
-            <Route path="skyrim">
-              <Route index element={<SkyrimHomepage />} />
-              <Route
-                path="commandbuilder"
-                element={<SkyrimCommandBuilder />}
-              ></Route>
-              <Route path="crafting" element={<SkyrimCraftingGuide />}></Route>
-              <Route path="dovahpy" element={<DovahPy/>}></Route>
+          <Route path="skyrim">
+            <Route index element={<SkyrimHomepage />} />
+            <Route
+              path="commandbuilder"
+              element={<SkyrimCommandBuilder />}
+            ></Route>
+            <Route path="crafting" element={<SkyrimCraftingGuide />}></Route>
+            <Route path="dovahpy" element={<DovahPy />}></Route>
+          </Route>
+
+          <Route path="ttyd">
+            <Route index element={<TtydHomepage />} />
+            <Route path="collectibles" element={<TtydHomepage />} />
+            <Route path="walkthrough">
+              <Route path="prologue" element={<TtydPrologue />} />
             </Route>
-
-            <Route path="ttyd">
-              <Route index element={<TtydHomepage />} />
-              <Route path="collectibles" element={<TtydHomepage />} />
-              <Route path="walkthrough">
-                <Route path="prologue" element={<TtydPrologue />} />
-              </Route>
-            </Route>
-
           </Route>
         </Routes>
-
-        
       </BrowserRouter>
     </div>
   );

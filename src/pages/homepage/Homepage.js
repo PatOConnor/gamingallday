@@ -1,25 +1,30 @@
 import { Link } from "react-router-dom";
 
-const Homepage = () => {
+
+
+const Homepage = ({ handleShowingSitemap }) => {
+
+  
+
   return (
     <div className="main-content rows">
-      <Link to="/cheats">
+      {/* Not sure why the inline style causes this to be finicky but reversing the nesting so it looks right breaks the CSS */}
+      <Link onClick={handleShowingSitemap}>
         <div className="panel slide left">All Games</div>
-      </Link>
-
-      <Link to="/cheats/skyrim">
-        <div className="panel slide right">Skyrim</div>
-      </Link>
-
-      <Link to="/cheats/ttyd">
-        <div className="panel slide left">
-          Paper Mario: The Thousand-Year Door
-        </div>
       </Link>
 
       <Link to="/about">
         <div className="panel slide right">About</div>
       </Link>
+
+      <Link to="/contact">
+        <div className="panel slide left">Contact</div>
+      </Link>
+
+      <a href="https://patoconnor.github.io">
+        <div className="panel slide right">My Other Stuff</div>
+      </a>
+      
     </div>
   );
 };
